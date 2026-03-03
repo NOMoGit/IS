@@ -218,7 +218,7 @@ with st.sidebar:
     st.markdown('<div class="nav-section-label">Main</div>', unsafe_allow_html=True)
     page = st.radio(
         "",
-        ["Overview", "ML Description", "ML Test", "NN Description", "NN Test", "Comparison"],
+        ["Overview", "Machine Learning Description", "Machine Learning Test", "Neural Network Description", "Neural Network Test", "Comparison"],
         label_visibility="collapsed"
     )
 
@@ -238,7 +238,7 @@ if page_name == "Overview":
     st.markdown("""
     <div class="hero-wrapper">
         <div class="hero-eyebrow">Computer Vision Project</div>
-        <div class="hero-title">ML vs Neural Network</div>
+        <div class="hero-title">Machine Learning vs Neural Network</div>
         <div class="hero-subtitle">Comparing classical machine learning pipelines with deep learning architectures for image classification tasks.</div>
     </div>
     """, unsafe_allow_html=True)
@@ -246,10 +246,10 @@ if page_name == "Overview":
     st.markdown("""
     <div class="stats-row">
         <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">ML Models</div></div>
-        <div class="stat-card"><div class="stat-num">82%</div><div class="stat-lbl">ML Accuracy</div></div>
+        <div class="stat-card"><div class="stat-num">82.3%</div><div class="stat-lbl">ML Accuracy</div></div>
         <div class="stat-card"><div class="stat-num">13</div><div class="stat-lbl">Total Classes</div></div>
         <div class="stat-card"><div class="stat-num">1</div><div class="stat-lbl">CNN Model</div></div>
-        <div class="stat-card"><div class="stat-num">91%</div><div class="stat-lbl">NN Accuracy</div></div>
+        <div class="stat-card"><div class="stat-num">91.2%</div><div class="stat-lbl">NN Accuracy</div></div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -264,7 +264,7 @@ if page_name == "Overview":
         <div class="pcard pcard-nn">
             <div class="pcard-badge badge-nn">NEURAL NETWORK</div>
             <div class="pcard-title">🌍 Scene Classification</div>
-            <div class="pcard-desc">Transfer learning approach using MobileNetV2 pretrained on ImageNet, fine-tuned with GAP → Dense → Dropout → Softmax head.</div>
+            <div class="pcard-desc">Transfer learning approach using MobileNetV2 pretrained on ImageNet, fine-tuned with GAP → BatchNorm → Dense → Dropout → Softmax head.</div>
             <div class="pcard-pipeline">Image → MobileNetV2 → GAP → Dense → Softmax</div>
         </div>
     </div>
@@ -273,18 +273,18 @@ if page_name == "Overview":
     st.markdown("---")
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown('<div class="section-title">🚗 ML Pipeline</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">Machine Learning Pipeline</div>', unsafe_allow_html=True)
         for n, t in [("1","Resize & Grayscale"),("2","HOG Feature Extraction"),("3","StandardScaler + PCA"),("4","SVM + RF + XGB Voting"),("5","Deploy .pkl Model")]:
             st.markdown(f'<div class="wf-step"><div class="wf-num">{n}</div><div class="wf-text">{t}</div></div>', unsafe_allow_html=True)
     with col2:
-        st.markdown('<div class="section-title">🌍 NN Pipeline</div>', unsafe_allow_html=True)
-        for n, t in [("1","Resize 160×160 + Normalize"),("2","MobileNetV2 Pretrained Base"),("3","GAP → Dense → Dropout"),("4","Train with Adam, 10 epochs"),("5","Deploy .keras Model")]:
+        st.markdown('<div class="section-title">Neural Network Pipeline</div>', unsafe_allow_html=True)
+        for n, t in [("1","Resize 160×160 + Normalize"),("2","MobileNetV2 Pretrained Base"),("3","GAP → BatchNorm → Dense → Dropout"),("4","Train with Adam, 10 epochs"),("5","Deploy .keras Model")]:
             st.markdown(f'<div class="wf-step"><div class="wf-num">{n}</div><div class="wf-text">{t}</div></div>', unsafe_allow_html=True)
 
 # ========================
 # ML DESCRIPTION
 # ========================
-elif page_name == "ML Description":
+elif page_name == "Machine Learning Description":
     st.markdown("""
     <div class="desc-hero">
         <div class="desc-tag tag-ml">MACHINE LEARNING</div>
@@ -295,7 +295,7 @@ elif page_name == "ML Description":
 
     st.markdown("""
     <div class="info-grid">
-        <div class="info-tile"><div class="info-tile-icon">🎯</div><div class="info-tile-val">82%</div><div class="info-tile-key">Test Accuracy</div></div>
+        <div class="info-tile"><div class="info-tile-icon">🎯</div><div class="info-tile-val">82.3%</div><div class="info-tile-key">Test Accuracy</div></div>
         <div class="info-tile"><div class="info-tile-icon">🏷️</div><div class="info-tile-val">7</div><div class="info-tile-key">Classes</div></div>
         <div class="info-tile"><div class="info-tile-icon">🗳️</div><div class="info-tile-val">3</div><div class="info-tile-key">Ensemble Models</div></div>
     </div>
@@ -555,7 +555,7 @@ elif page_name == "ML Description":
 # ========================
 # ML TEST
 # ========================
-elif page_name == "ML Test":
+elif page_name == "Machine Learning Test":
     st.markdown("""
     <div class="desc-hero" style="padding: 28px 36px; margin-bottom: 24px;">
         <div class="desc-tag tag-ml">MACHINE LEARNING</div>
@@ -605,7 +605,7 @@ elif page_name == "ML Test":
 # ========================
 # NN DESCRIPTION
 # ========================
-elif page_name == "NN Description":
+elif page_name == "Neural Network Description":
     st.markdown("""
     <div class="desc-hero" style="background: linear-gradient(135deg, #0d1628, #1a0e2e); border-color: #3b0764;">
         <div class="desc-tag tag-nn">NEURAL NETWORK</div>
@@ -680,13 +680,13 @@ elif page_name == "NN Description":
             </div>
             <div style="display:flex;gap:14px;align-items:flex-start;">
                 <div style="background:linear-gradient(135deg,#7c3aed,#c084fc);border-radius:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;flex-shrink:0;margin-top:2px;">3</div>
-                <div><div style="font-size:0.88rem;font-weight:600;color:#c084fc;margin-bottom:3px;">Normalization (÷ 255.0)</div>
-                <div style="font-size:0.82rem;color:#64748b;line-height:1.7;">ปรับ pixel value จาก [0–255] → [0.0–1.0] ด้วย <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">rescale=1./255</code> ช่วยให้ gradient descent ลู่เข้าเร็วขึ้น</div></div>
+                <div><div style="font-size:0.88rem;font-weight:600;color:#c084fc;margin-bottom:3px;">MobileNetV2 preprocess_input</div>
+                <div style="font-size:0.82rem;color:#64748b;line-height:1.7;">ใช้ <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">preprocessing_function=preprocess_input</code> จาก <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">mobilenet_v2</code> แทน rescale=1/255 — แปลง pixel จาก [0–255] → [-1, 1] ให้ตรงกับที่ MobileNetV2 ถูก pretrain มา</div></div>
             </div>
             <div style="display:flex;gap:14px;align-items:flex-start;">
                 <div style="background:linear-gradient(135deg,#7c3aed,#c084fc);border-radius:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;flex-shrink:0;margin-top:2px;">4</div>
                 <div><div style="font-size:0.88rem;font-weight:600;color:#c084fc;margin-bottom:3px;">Data Augmentation (train set only)</div>
-                <div style="font-size:0.82rem;color:#64748b;line-height:1.7;">เพิ่มความหลากหลายของ train data ด้วย <strong style="color:#94a3b8;">Horizontal Flip, Rotation ±20°, Zoom 20%</strong> เพื่อป้องกัน overfitting — ไม่ apply กับ validation/test set</div></div>
+                <div style="font-size:0.82rem;color:#64748b;line-height:1.7;">เพิ่มความหลากหลายของ train data ด้วย <strong style="color:#94a3b8;">Horizontal Flip, Rotation ±15°, Zoom 15%, Width/Height Shift 10%</strong> เพื่อป้องกัน overfitting — ไม่ apply กับ validation/test set</div></div>
             </div>
         </div>
     </div>
@@ -725,11 +725,12 @@ elif page_name == "NN Description":
             พร้อม shortcut connection เพื่อ preserve gradient flow
         </div>
         <div style="background:#060e1a;border-radius:10px;padding:14px 16px;font-family:monospace;font-size:0.82rem;color:#7dd3fc;line-height:1.8;border-left:3px solid #7c3aed;">
-            MobileNetV2 (weights='imagenet', include_top=False, frozen)<br>
-            → GlobalAveragePooling2D()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ลด spatial dimension → 1 vector<br>
-            → Dense(256, activation='relu')&nbsp;&nbsp;# classification head<br>
-            → Dropout(0.3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ป้องกัน overfitting<br>
-            → Dense(6, activation='softmax')&nbsp;# output 6 classes
+            MobileNetV2 (weights='imagenet', include_top=False, input=(160,160,3), frozen)<br>
+            → GlobalAveragePooling2D()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ลด spatial → 1 vector per channel<br>
+            → BatchNormalization()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# normalize activation ก่อนเข้า Dense<br>
+            → Dense(256, activation='relu')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# classification head<br>
+            → Dropout(0.5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ป้องกัน overfitting (50%)<br>
+            → Dense(6, activation='softmax')&nbsp;&nbsp;&nbsp;&nbsp;# output 6 classes
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -747,8 +748,12 @@ elif page_name == "NN Description":
                 <div style="color:#64748b;line-height:1.7;">เฉลี่ยค่า feature map ทั้งหมดใน spatial dimension เหลือ 1 ค่าต่อ channel — ลด overfitting เทียบ Flatten</div>
             </div>
             <div style="background:#060e1a;border-radius:10px;padding:14px;">
-                <div style="color:#c084fc;font-weight:600;margin-bottom:6px;">Dropout (0.3)</div>
-                <div style="color:#64748b;line-height:1.7;">สุ่มปิด 30% ของ neuron ในแต่ละ forward pass ระหว่าง training บังคับให้โมเดลไม่พึ่งพา neuron ใดมากเกินไป</div>
+                <div style="color:#c084fc;font-weight:600;margin-bottom:6px;">BatchNormalization</div>
+                <div style="color:#64748b;line-height:1.7;">normalize activation หลัง GAP ให้มี mean≈0, variance≈1 ช่วยให้ Dense layer เรียนรู้ได้เสถียรและเร็วขึ้น</div>
+            </div>
+            <div style="background:#060e1a;border-radius:10px;padding:14px;">
+                <div style="color:#c084fc;font-weight:600;margin-bottom:6px;">Dropout (0.5)</div>
+                <div style="color:#64748b;line-height:1.7;">สุ่มปิด 50% ของ neuron ในแต่ละ forward pass ระหว่าง training บังคับให้โมเดลไม่พึ่งพา neuron ใดมากเกินไป</div>
             </div>
             <div style="background:#060e1a;border-radius:10px;padding:14px;">
                 <div style="color:#c084fc;font-weight:600;margin-bottom:6px;">Adam Optimizer</div>
@@ -763,7 +768,34 @@ elif page_name == "NN Description":
     """, unsafe_allow_html=True)
 
     # Training config
-    st.markdown('<div style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin:8px 0 14px;">⚙️ Training Config</div>', unsafe_allow_html=True)
+    # Fine-tuning strategy
+    st.markdown("""
+    <div style="background:#0a1220;border:1px solid #1a2a44;border-radius:14px;padding:20px 24px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);border-radius:8px;padding:4px 10px;font-size:0.7rem;color:#c084fc;font-weight:700;letter-spacing:1.5px;">TRAINING STRATEGY</div>
+            <div style="font-size:0.95rem;font-weight:700;color:#e2e8f0;">2-Phase Training</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="background:#060e1a;border-radius:10px;padding:14px;border-left:3px solid #7c3aed;">
+                <div style="color:#c084fc;font-weight:600;margin-bottom:6px;font-size:0.87rem;">Phase 1 — Head Training (max 10 epochs)</div>
+                <div style="color:#64748b;font-size:0.82rem;line-height:1.7;">
+                    Freeze ทุก layer ของ MobileNetV2 — เทรนเฉพาะ classification head ใหม่<br>
+                    <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">Adam(lr=1e-3)</code> &nbsp;|&nbsp;
+                    <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">EarlyStopping(patience=3)</code> &nbsp;|&nbsp;
+                    <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">ReduceLROnPlateau(factor=0.3, patience=2)</code>
+                </div>
+            </div>
+            <div style="background:#060e1a;border-radius:10px;padding:14px;border-left:3px solid #c084fc;">
+                <div style="color:#c084fc;font-weight:600;margin-bottom:6px;font-size:0.87rem;">Phase 2 — Fine-tuning (max 10 epochs)</div>
+                <div style="color:#64748b;font-size:0.82rem;line-height:1.7;">
+                    Unfreeze <strong style="color:#94a3b8;">40 layer สุดท้าย</strong> ของ backbone แล้วเทรนต่อด้วย lr ต่ำมาก<br>
+                    <code style="color:#e879f9;background:#0a1628;padding:1px 5px;border-radius:4px;">Adam(lr=5e-6)</code> — ป้องกัน catastrophic forgetting ของ pretrained weights<br>
+                    → Test Accuracy สุดท้าย: <strong style="color:#94a3b8;">91.2%</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     c1, c2, c3 = st.columns(3)
     with c1: st.metric("Optimizer", "Adam")
     with c2: st.metric("Input Size", "160×160")
@@ -793,7 +825,7 @@ elif page_name == "NN Description":
 # ========================
 # NN TEST
 # ========================
-elif page_name == "NN Test":
+elif page_name == "Neural Network Test":
     st.markdown("""
     <div class="desc-hero" style="background: linear-gradient(135deg, #0d1628, #1a0e2e); border-color: #3b0764; padding: 28px 36px; margin-bottom: 24px;">
         <div class="desc-tag tag-nn">NEURAL NETWORK</div>
@@ -848,8 +880,8 @@ elif page_name == "Comparison":
     """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
-    with col1: st.metric("🚗 ML Accuracy", "82%", delta=None)
-    with col2: st.metric("🌍 NN Accuracy", "91%", delta="+9%")
+    with col1: st.metric("🚗 Machine Learning Accuracy", "82.3%", delta=None)
+    with col2: st.metric("🌍 Neural Network Accuracy", "91.2%", delta="+8.9%")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -859,7 +891,7 @@ elif page_name == "Comparison":
         <thead><tr><th>Attribute</th><th>Machine Learning</th><th>Neural Network</th></tr></thead>
         <tbody>
             <tr><td>Dataset</td><td class="highlight">Vehicle Dataset</td><td class="highlight">Intel Scene</td></tr>
-            <tr><td>Accuracy</td><td><span class="badge-good">82%</span></td><td><span class="badge-better">91%</span></td></tr>
+            <tr><td>Accuracy</td><td><span class="badge-good">82.3%</span></td><td><span class="badge-better">91.2%</span></td></tr>
             <tr><td>Feature Extraction</td><td>Handcrafted (HOG)</td><td>Automatic (CNN)</td></tr>
             <tr><td>Model Architecture</td><td>SVM + RF + XGBoost</td><td>MobileNetV2</td></tr>
             <tr><td>Training Time</td><td><span class="badge-good">Fast</span></td><td>Longer</td></tr>
