@@ -1,5 +1,4 @@
-*.pkl
-*.keras
-*.h5
+pca.pkl
+vehicle_voting_model.pkl
 __pycache__/
 .ipynb_checkpoints/
