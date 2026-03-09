@@ -5,7 +5,26 @@ import joblib
 from skimage.feature import hog
 from PIL import Image
 from tensorflow.keras.models import load_model
+import gdown
+import os
 
+def download_models():
+
+    if not os.path.exists("vehicle_voting_model.pkl"):
+        gdown.download(
+            "https://drive.google.com/uc?id=1Zd3kPZ8EppOJmEQnusRlQ0sTwP85vb2C",
+            "vehicle_voting_model.pkl",
+            quiet=False
+        )
+
+    if not os.path.exists("pca.pkl"):
+        gdown.download(
+            "https://drive.google.com/uc?id=1lPoiadFhgr1kPbPQ6_y8JT75zuS1Siel",
+            "pca.pkl",
+            quiet=False
+        )
+
+download_models()
 # ========================
 # Page Config
 # ========================
