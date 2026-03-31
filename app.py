@@ -364,6 +364,14 @@ st.markdown("""
     [data-testid="stAppViewContainer"] {
         padding-top: 0px !important;
     }
+    section[data-testid="stSidebar"] {
+        opacity: 1 !important;
+    }
+
+    section[data-testid="stSidebar"] * {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 

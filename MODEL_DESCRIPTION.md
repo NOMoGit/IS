@@ -1,8 +1,12 @@
 
 รายละเอียดการพัฒนาโมเดล — Project IS 2568
 
+
+
 โมเดลที่ 1: Machine Learning (Ensemble)
 Dataset: Vehicle Type Recognition
+
+
 
 --- ที่มาของ Dataset ---
 ดาวน์โหลดจาก Kaggle — Vehicle Type Recognition Dataset
@@ -112,8 +116,14 @@ Overall Accuracy: 82.3%
     https://scikit-learn.org
 
 
+
+
+
+
 โมเดลที่ 2: Neural Network (Transfer Learning)
 Dataset: Intel Image Classification
+
+
 
 --- ที่มาของ Dataset ---
 ดาวน์โหลดจาก Kaggle — Intel Image Classification
