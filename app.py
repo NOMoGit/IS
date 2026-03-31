@@ -364,22 +364,23 @@ st.markdown("""
     [data-testid="stAppViewContainer"] {
         padding-top: 0px !important;
     }
-    section[data-testid="stSidebar"] {
-        opacity: 1 !important;
-    }
-
     section[data-testid="stSidebar"] * {
         opacity: 1 !important;
-        pointer-events: auto !important;
-    }
-    div[role="radiogroup"] > label {
-        opacity: 1 !important;
-        color: var(--text) !important;
+        color: #18160f !important;
     }
 
-    div[role="radiogroup"] > label span {
+    label[data-baseweb="radio"] {
         opacity: 1 !important;
-        color: var(--text) !important;
+        color: #18160f !important;
+    }
+
+    label[data-baseweb="radio"] * {
+        opacity: 1 !important;
+        color: #18160f !important;
+    }
+
+    label[data-baseweb="radio"][aria-disabled="true"] {
+        opacity: 1 !important;
     }
 </style>
 """, unsafe_allow_html=True)
