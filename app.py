@@ -47,7 +47,7 @@ st.markdown("""
         --border2:    #cdc9c0;
         --text:       #18160f;
         --text2:      #56524a;
-        --text3:      #a09b92;
+        --text3:      #4b5563;
         --ml:         #2563eb;
         --ml-d:       #1d4ed8;
         --ml-light:   #eff6ff;

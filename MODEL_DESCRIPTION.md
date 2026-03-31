@@ -1,11 +1,8 @@
-================================================================
-รายละเอียดการพัฒนาโมเดล — Project IS 2568
-================================================================
 
-================================================================
+รายละเอียดการพัฒนาโมเดล — Project IS 2568
+
 โมเดลที่ 1: Machine Learning (Ensemble)
 Dataset: Vehicle Type Recognition
-================================================================
 
 --- ที่มาของ Dataset ---
 ดาวน์โหลดจาก Kaggle — Vehicle Type Recognition Dataset
@@ -115,10 +112,8 @@ Overall Accuracy: 82.3%
     https://scikit-learn.org
 
 
-================================================================
 โมเดลที่ 2: Neural Network (Transfer Learning)
 Dataset: Intel Image Classification
-================================================================
 
 --- ที่มาของ Dataset ---
 ดาวน์โหลดจาก Kaggle — Intel Image Classification
@@ -219,5 +214,3 @@ Test Accuracy: 91.2%
     Hierarchical Image Database. IEEE CVPR 2009.
 [5] Keras / TensorFlow: Chollet, F., et al. (2015). Keras.
     https://keras.io
-
-================================================================
