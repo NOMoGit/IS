@@ -372,6 +372,15 @@ st.markdown("""
         opacity: 1 !important;
         pointer-events: auto !important;
     }
+    div[role="radiogroup"] > label {
+        opacity: 1 !important;
+        color: var(--text) !important;
+    }
+
+    div[role="radiogroup"] > label span {
+        opacity: 1 !important;
+        color: var(--text) !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
